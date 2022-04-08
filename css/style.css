@@ -76,6 +76,18 @@ main p, main li{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+#manage-table-post .row{
+    border-bottom: 1px solid black;
+}
+#manage-table-post-headers .col, #manage-table-post-headers .col-1{
+    font-weight: bold;
+}
+input{
+    width: 100%;
+}
+#manage-table-post-editOK, #manage-table-post-editErro, #manage-table-post-removeOK, #manage-table-post-removeErro{
+    display: none;
+}
 footer{
     height: 65px;
 }
