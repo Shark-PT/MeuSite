@@ -1,7 +1,8 @@
 <?php 
-/*if (!isset($_SESSION['username']) || empty($_SESSION['username']))
+session_start();
+if (!isset($_SESSION['username']) || empty($_SESSION['username']))
     header('Location:../index.php');
-*/
+
 if(!isset($_GET['post-id']) || !isset($_GET['post-title']) || !isset($_GET['post-description']) || !isset($_GET['post-date']) || !isset($_GET['post-user']))
     header('Location:../admin/index.php');
 

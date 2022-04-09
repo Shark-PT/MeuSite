@@ -31,7 +31,7 @@
         <div class="col-1"></div>
     </div>
         <?php while($row = $result->fetch_assoc()) { ?>
-    <form action="../db/editPost.php" method="get">
+    <form action="../db/editPost.php" class="w-100" method="get">
         <div class="row text-center p-2">
             <div class="col-1 h-100 my-auto">
                 <input class="btn btn-outline-dark" type="submit" value="Editar"></div>
@@ -46,7 +46,7 @@
             <div class="col h-100 my-auto">
                 <input type="text" name="post-user" id="post-user<?=$row['id']?>" value="<?=$row['id_user']?>"></div>
             <div class="col-1 h-100 my-auto">
-                <a href="../db/removePost.php?id=<?=$row['id']?>" class="btn btn-outline-dark">Remover</a></div>
+                <a href="../db/removePost.php?id=<?=$row['id']?>" class="btn btn-outline-dark w-100 ">Remover</a></div>
         </div>
     </form>
 <?php } $conn->close(); }?> 

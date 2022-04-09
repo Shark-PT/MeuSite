@@ -85,7 +85,9 @@ main p, main li{
 input{
     width: 100%;
 }
-#manage-table-post-editOK, #manage-table-post-editErro, #manage-table-post-removeOK, #manage-table-post-removeErro{
+#manage-table-post-editOK, #manage-table-post-editErro,
+#manage-table-post-removeOK, #manage-table-post-removeErro,
+#manage-table-post-insertOK, #manage-table-post-insertErro{
     display: none;
 }
 footer{
