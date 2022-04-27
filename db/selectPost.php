@@ -2,7 +2,7 @@
 
 include('conn.php');
 
-$sql = "SELECT * FROM posts ORDER BY date_time DESC";
+$sql = "SELECT * FROM posts ORDER BY id DESC";
 $result = $conn->query($sql);
 $i=0;
 if ($result->num_rows > 0) {

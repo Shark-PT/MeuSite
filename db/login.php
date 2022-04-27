@@ -9,11 +9,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = mysqli_real_escape_string($conn,$_POST['form-password']);
     $password = md5($password); 
     
-    $stmt = $conn->prepare("SELECT username, password FROM users WHERE username = ? AND password = ?");
-    $stmt->bind_param("ss", $username, $password);
-    $stmt->execute();
-    $result = $stmt->get_result(); // get the mysqli result
-    if ($result->num_rows == 1) {
+    $sql = "SELECT username, password FROM users WHERE username = '$username' AND password = '$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
         $_SESSION['username']=$username;
         $sql = "UPDATE users SET last_login=NOW() WHERE username='$username'";
         $conn->query($sql);
